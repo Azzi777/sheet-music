@@ -11,7 +11,7 @@ right_hand_p = { \global \relative c' {
   <g d>8-. a-. b-. <g d>->~ <g d> <e b>4. | g8-. a-. b-. <d g,>->~ <d g,> cis-. b-. <cis g>->~ | <cis g> b-. a-. <b fis>->~ <b fis> a-. g-. <a e>->~ | <a e>2 r | \time 6/4 g8( a b <c g d>-^) r4 <b e, a,>2. |
   \time 4/4 g8-. a,-. b'-. g-. a,-. d( e fis | g8 a b d) s  cis b cis | s b a b s a g a~ | a1 | \time 6/4 g8( a b <c g d>-^) r4 <b e, a,>2. | \bar "||"
   \time 4/4 <a e>8 <a e> <g e> <a e>~ <a e>8 <a e> <b fis>8 g~ | g e4. r4 e8 <e' b fis>~ | <e b fis>4 b8 <a fis>~ <a fis> g~ g e~ | e2 r | 
-  a4 g8 a~ a4 b8 g~ | g e4. r4 e8 g'~ | g4 e8 b~ b a a g |  
+  a4 g8 a~ a4 b8 g~ | g e4. r4 e8 <g' b,>~ | <g b,>4 <fis a,>8 <e b>~ <e b>4 <b d,>8 | <a c,>4 <g b,>4
 }}
 right_hand_s = { \global \relative c' { 
   s1 | s | d2. s4 | r8 <b a>-. r8 <b a>-. r8 <b a>-. r8 <b a>-. | s1 | s | s | s |
