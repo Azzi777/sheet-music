@@ -3,39 +3,56 @@
   composer = "Arr.: asbjoree"
 }
 
-global = { \key e \dorian \tempo "Vivace" 4 = 144  }
+global = { \key e \minor \tempo "Vivace" 4 = 144}
 
 right_hand_p = { \global \relative c' { 
-  \time 4/4 <e' b e,>2~ <e b e,>8 <fis cis fis,> <g d g,> <a e a,>~ | <a e a,> <g d g,>4 <fis cis fis,>8~ <fis cis fis,> <e b e,>4. | \appoggiatura {bes16} b8. a16 g2. | r1
-  e'2~ e8 fis g a~ | a g4 fis8~ fis e4 b8~ | b16 a g8~ g2 r4 | r1 | \bar "||"
-  <g d>8-. a-. b-. <g d>->~ <g d> <e b>4. | g8-. a-. b-. d->~ d cis-. b-. cis->~ | cis b-. a-. b->~ b a-. g-. <a e>->~ | <a e>2 r | \time 6/4 g8( a b <c g d>-^) r4 <b e, a,>2. |
-  \time 4/4 g8 a b g~ g e4. | g8 a b d~ d cis b cis~ | cis b a b~ b a g a~ | a2 r | g8 a b c~ c4 b |
-  a4 g8 a~ a4 b8 g~ | g e4. r4 e8 e'~ | e4 b8 a~ a g g e~ | e2 r | 
+  \time 4/4 <e' g,>4. g,16( b d8 fis <g b,> <a c,>~) | <a c,> <g b,>4 <fis a,>8~ <fis a,> <e g,>4. | \appoggiatura {bes16} b8. a16 g2 a,8 b | s1
+  <g' d>4 d16 es e8~ e <g d> <a e> <d a>~ | <d a> <b g>4 <a fis>8~ <a fis> <g e>4 <a fis>8~ | <a fis>1 | r8 b'16( a fis8 d b a) e-. fis-. | \bar "||"
+  <g d>8-. a-. b-. <g d>->~ <g d> <e b>4. | g8-. a-. b-. <d g,>->~ <d g,> cis-. b-. <cis g>->~ | <cis g> b-. a-. <b fis>->~ <b fis> a-. g-. <a e>->~ | <a e>2 r | \time 6/4 g8( a b <c g d>-^) r4 <b e, a,>2. |
+  \time 4/4 g8-. a,-. b'-. g-. a,-. d( e fis | g8 a b d) s  cis b cis | s b a b s a g a~ | a1 | \time 6/4 g8( a b <c g d>-^) r4 <b e, a,>2. | \bar "||"
+  \time 4/4 <a e>8 <a e> <g e> <a e>~ <a e>8 <a e> <b fis>8 g~ | g e4. r4 e8 <e' b fis>~ | <e b fis>4 b8 <a fis>~ <a fis> g~ g e~ | e2 r | 
   a4 g8 a~ a4 b8 g~ | g e4. r4 e8 g'~ | g4 e8 b~ b a a g |  
 }}
 right_hand_s = { \global \relative c' { 
-  s1 | s | d | s |
+  s1 | s | d2. s4 | r8 <b a>-. r8 <b a>-. r8 <b a>-. r8 <b a>-. | s1 | s | s | s |
+  s | s | s | s | s1. | s1 | s2 e | d cis | c1 | s1. |
 }}
 
 dynamics = {
-  s1\f | s | s | s | s | s | s | s |
-  s\mp | s | s |
+  s1\f | s | s | s | s | s | s | s\mp |
+  s | s | s |
 }
 
-left_hand = { \global \relative c \clef bass {
-  \time 4/4 <e g, c,>1~ | <e g, c,> | <g b, e,>2 e,8-. <g b,>-. fis,-. <g b,>-. | g,-. <g b,>-. fis,-. <g b,>-. e,-. <g b,>-. <fis a, d,>4 | <e g, c,>1~ | <e g, c,> | <g b, e,>~ | <g b, e,> |
-  e,8-. b,-. e-. f( fis g4.) | e8-. fis-. g-. b->~ b a-. g-. a->~ | a g-. fis-. g->~ g fis-. e-. c,-> | g,-. c-. d( dis e2) | \time 6/4 e8( fis g <a c>-^) r4 <g b, e,>2. |
-  \time 4/4 e,8-. b,-. e-. f( fis g4.) | e8-. fis-. g-. b->~ b a-. g-. a->~ | a g-. fis-. g->~ g fis-. e-. c,-> | g,-. c-. d( dis e2) | \time 6/4 e8( fis g <d' g>-^) r4 <g b, e,>2. |
+left_hand_p = { \global \relative c \clef bass {
+  <e g, c,>1~ | <e g, c,> | <g b, e,>1~ | <b, e,> | 
+  <e g, c,>1~ | <e g, c,>2 <fis a, d,> | <g b, e,>1~ | <g b, e,>2. e8-. b,-. |
+
+  e,8-. b,-. e-. c( fis g4.) | e8-. fis-. g-. <e' b>->~ <e' b> a-. g-. <d' a>->~ | <d' a> g-. fis-. <d' g>->~ <d' g> fis-. e-. c,-> | 
+  g,-. c-. d( dis e2) | e8( fis g <a c>-^) r4 <g b, e,>2. |
+
+  e,8-. b,-. g-. b,-. e,-. b,-. g-. b,-. | e8-. fis-. g-. a-. <b fis>2 | <a e> <g d> | c8-.
+  e,-. g,-. a,-. d( dis e4) | e8( fis g <d' g>-^) r4 <g b, e,>2. |
+
+  <b fis>2 <c' g> | <d' a> <c' g> | <cis' g> <c' g> | e,8-. b,-. e-. fis~ fis g4. |
+  c,8( g, d e~ e g4.) | d,8( a, e fis~ fis a4.) | e,8( b, e fis~ fis g4.)
 }}
+left_hand_s = { \global \relative c \clef bass {
+  s1 | s | s | g4-. fis-. g-. fis-. |
+  }}
+
 
 \score {
-  \new PianoStaff  <<
+  \new PianoStaff <<
+    
     \new Staff <<
       \new Voice \right_hand_p
       \new Voice \right_hand_s
     >>
     \new Dynamics \dynamics
-    \new Staff \left_hand
+    \new Staff <<
+      \new Voice \left_hand_p
+      \new Voice \left_hand_s
+    >>
   >>
   \layout {}
   \midi {}
