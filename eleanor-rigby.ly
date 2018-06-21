@@ -1,57 +1,42 @@
 \header {
-  title = "Toccata Eleonora Rigidia"
-  composer = "Composer"
+  title = "Eleanor rigby"
+  composer = "Arr.: asbjoree"
 }
 
-global = { \key e \minor \tempo "Largo" 8= 66  }
+global = { \key e \dorian \tempo "Vivace" 4 = 144  }
 
-cf = { \global  \repeat volta 2 { e2\fff~ e8 fis g a~ | a g4 fis8~ fis e4 b8~ | b16 a g8~ g2 r4 }
-    \repeat volta 2 { g8 a b g~ g e4. | g8 a b d~ d cis b cis~ | cis b a b~ b a g a~ | a2 r | g8 a b c~ c4 b }
-    a4 g8 a~ a4 b8 g~ | g e4. r4 e8 e'~ | e4 b8 a~ a g g e~ | e2 r | 
-    a4 g8 a~ a4 b8 g~ | g e4. r4 e8 g'~ | g4 e8 b~ b a a g |  }
+right_hand_p = { \global \relative c' { 
+  \time 4/4 <e' b e,>2~ <e b e,>8 <fis cis fis,> <g d g,> <a e a,>~ | <a e a,> <g d g,>4 <fis cis fis,>8~ <fis cis fis,> <e b e,>4. | \appoggiatura {bes16} b8. a16 g2. | r1
+  e'2~ e8 fis g a~ | a g4 fis8~ fis e4 b8~ | b16 a g8~ g2 r4 | r1 | \bar "||"
+  <g d>8-. a-. b-. <g d>->~ <g d> <e b>4. | g8-. a-. b-. d->~ d cis-. b-. cis->~ | cis b-. a-. b->~ b a-. g-. <a e>->~ | <a e>2 r | \time 6/4 g8( a b <c g d>-^) r4 <b e, a,>2. |
+  \time 4/4 g8 a b g~ g e4. | g8 a b d~ d cis b cis~ | cis b a b~ b a g a~ | a2 r | g8 a b c~ c4 b |
+  a4 g8 a~ a4 b8 g~ | g e4. r4 e8 e'~ | e4 b8 a~ a g g e~ | e2 r | 
+  a4 g8 a~ a4 b8 g~ | g e4. r4 e8 g'~ | g4 e8 b~ b a a g |  
+}}
+right_hand_s = { \global \relative c' { 
+  s1 | s | d | s |
+}}
 
-cpOne = { \global b4\rest <b e> <c e> dis | fis e <c e>8 e4 <dis>8 | dis4 e2\mordent  }
-
-cpTwo = { 
-  \global s4_\ff-\markup {\bold \italic "pesante"} \appoggiatura {e32 fis g a b cis dis } g,4 
-  <fis a>2 <fis b>4 <g b> fis8 <g b> <fis a>4 |  b4~b16 c b8~ b4  r4
-
+dynamics = {
+  s1\f | s | s | s | s | s | s | s |
+  s\mp | s | s |
 }
 
-cpThree = {
-  \global r4 <b e> c4.. b16 | <b dis>4 <b e> <a e'>8 << {e'4} \\ {b8 c} >> <b fis'>8 | 
-  << {g'8. fis16 e2}  \\ {b4.. \clef bass g16 e4} \\ {\voiceFour e'2. }  >>  
-  % dis,4
-} 
-
+left_hand = { \global \relative c \clef bass {
+  \time 4/4 <e g, c,>1~ | <e g, c,> | <g b, e,>2 e,8-. <g b,>-. fis,-. <g b,>-. | g,-. <g b,>-. fis,-. <g b,>-. e,-. <g b,>-. <fis a, d,>4 | <e g, c,>1~ | <e g, c,> | <g b, e,>~ | <g b, e,> |
+  e,8-. b,-. e-. f( fis g4.) | e8-. fis-. g-. b->~ b a-. g-. a->~ | a g-. fis-. g->~ g fis-. e-. c,-> | g,-. c-. d( dis e2) | \time 6/4 e8( fis g <a c>-^) r4 <g b, e,>2. |
+  \time 4/4 e,8-. b,-. e-. f( fis g4.) | e8-. fis-. g-. b->~ b a-. g-. a->~ | a g-. fis-. g->~ g fis-. e-. c,-> | g,-. c-. d( dis e2) | \time 6/4 e8( fis g <d' g>-^) r4 <g b, e,>2. |
+}}
 
 \score {
-  <<
-    \new PianoStaff \with { midiInstrument = #"church organ" }  <<
-      \new Staff <<
-        \new Voice \relative c'' { \voiceOne \cpOne }
-        \new Voice \relative c' { \voiceTwo \cpTwo }
-      >>
-      \new Staff \relative c' { \cpThree }
-      \new Staff \relative c { \clef bass \cf }
-      
+  \new PianoStaff  <<
+    \new Staff <<
+      \new Voice \right_hand_p
+      \new Voice \right_hand_s
     >>
+    \new Dynamics \dynamics
+    \new Staff \left_hand
   >>
   \layout {}
-}
-
-\score {
-  \unfoldRepeats 
-    <<
-    \new PianoStaff \with { midiInstrument = #"church organ" }  <<
-      \new Staff \with {midiMaximumVolume = 0.8 } <<
-        \new Voice \relative c'' { \voiceOne \cpOne }
-        \new Voice \relative c' { \voiceTwo \cpTwo }
-      >>
-      \new Staff \with {midiMaximumVolume = 0.8 } \relative c' { \cpThree }
-      \new Staff \relative c { \clef bass \cf }
-      \new Staff \relative c, { \clef bass \cf }      
-    >>
-  >>
   \midi {}
 }
