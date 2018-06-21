@@ -1,5 +1,5 @@
 \header {
-  title = "Eleanor rigby"
+  title = "Eleanor Rigby"
   composer = "Arr.: asbjoree"
 }
 
