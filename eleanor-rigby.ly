@@ -19,8 +19,8 @@ right_hand_s = { \global \relative c' {
 }}
 
 dynamics = {
-  s1\f | s | s | s | s | s | s | s\mp |
-  s | s | s | s | s4.\< s8\f s1 |
+  s1\f | s | s | s | s | s | s | s8 s4.\mp s2 |
+  s1 | s | s | s | s4.\< s8\f s1 |
   s\mp | s | s | s | s4.\< s8\f s1 |
   s\mp | s | s | s | s\mf |
 }
@@ -35,7 +35,7 @@ left_hand_p = { \global \relative c \clef bass {
   e,8-. b,-. g-. b,-. e,-. b,-. g-. b,-. | e8-. fis-. g-. a-. <b fis>2 | <a e> <g d> | c8-.
   e,-. g,-. a,-. d( dis e4) | \stemDown e8( fis g <a c>-^) r4 <g b, e,>2.-> \stemNeutral |
 
-  <b fis>2 <c' g> | <d' a> <c' g> | <cis' g> <c' g> | e,8-. b,-. e-. fis~ fis g4. |
+  <b fis>2( <c' g> | <d' a> <c' g>) | <cis' g> <c' g> | e,8-. b,-. e-. fis~ fis g4. |
   c,8( g, d e~ e g4.) | d,8( a, e fis~ fis a4.) | e,8( b, e fis~ fis g4.) | r1
 }}
 left_hand_s = { \global \relative c \clef bass {
