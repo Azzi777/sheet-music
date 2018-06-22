@@ -7,7 +7,7 @@ global = { \key e \minor \tempo "Vivace" 4 = 144}
 
 right_hand_p = { \global \relative c' { 
   \time 4/4 <e' g,>4. \stemDown g,16( b d8 fis <g b,> <a c,>~) \stemNeutral | <a c,> <g b,>4 <fis a,>8~ <fis a,> <e g,>4. | \appoggiatura {bes16} b8. a16 g2 s4 | s1 \break
-  <g' d>4 d16 es e8~ e <g d> <a e> <d a>~ | <d a> <b g>4 <a fis>8~ <a fis> <g e>4 <a fis>8~ | <a fis>1 | r8 b'16( a fis8 d b a) e-. fis-. | \bar "||"
+  <g d>4 d16 es e8~ e <g d> <a e> <d a>~ | <d a> <b g>4 <a fis>8~ <a fis> <g e>4 <a fis>8~ | <a fis>1 | r8 b'16( a fis8 d b a) e-. fis-. | \bar "||"
   <g d>8-. a-. b-. <g d>->~ <g d> <e b>4. | \stemUp g8-. a-. b-. <d g,>->~ <d g,> cis-. b-. <cis g>->~ | <cis g> b-. a-. <b fis>->~ <b fis> a-. g-. <a e>->~ | <a e>2 \stemNeutral r | \time 6/4 g8^( a b <c g d>-^) r4 <b e, a,>2.-> |
   \time 4/4 g8-. a,-. b'-. g-. a,-. d( e fis | g8 a b d) s  \stemUp cis b cis | s b a b s a g a^~ | a1 \stemNeutral | \time 6/4 g8^( a b <c g d>-^) r4 <b e, a,>2.-> | \bar "||"
   \time 4/4 <a e>8 <a e> <g e> <a e>~ <a e>8 <a e> <b fis>8 g~ | g e4. r4 \stemDown e8 <e' b fis>~ | <e b fis>4 \stemNeutral b8 <a fis>~ <a fis> g~ g e~ | e2 r | 
